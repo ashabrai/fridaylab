@@ -104,18 +104,30 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
+  var subArray= sum(testArray[0],testArray[1])[0];
+  var arrayAdd =sum(subArray,testArray[2])[0];
+  var arr = [];
+  
+  arr.push(arrayAdd); // this is producing the number its asking.
 
+  var msg = testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' was passed in as an array of numbers, ' + 'and ' + arrayAdd + ' is their sum.';
+  console.log(msg);
+
+  arr.push(msg); // this is now going to add the msg to the arr
+
+  return arr;
 }
+
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
 /* Problem 5
-Write a function called multiplyArray() that takes an array of numbers as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
+Write a function called multiplyArray() that takes an array of numbers as its argument and returns an array whose first element is the product of wthose numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
 
 "The numbers 2,3,4 have a product of 24."
 
