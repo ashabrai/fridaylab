@@ -33,7 +33,7 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function testMultiply(a, b) { //eslint-disable-line
+function multiply(a, b) { //eslint-disable-line
 var total = a * b;
 var arr = [];
 arr.push(total);
@@ -61,11 +61,32 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+  var subTotal = sum(a,b)[0];
+  var numThree = sum(subTotal,c)[0];
+  var arr = [];
+  arr.push(numThree);
 
+  var answerTwo = multiply(a,b)[0];
+  var answerThree = multiply(answerTwo,c)[0];
+  
+  arr.push(answerThree);
+
+  var msg = a + ' and ' + b + ' and ' + c + ' sum to ' + numThree + '.';
+  var msgTwo = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + answerThree + '.';
+
+  arr.push(msg);
+  arr.push(msgTwo);
+
+  console.log('var msg', msg);
+  console.log('var msgTwo', msgTwo);
+  console.log('var arr', arr);
+  
+  return arr;
 }
 
+
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
