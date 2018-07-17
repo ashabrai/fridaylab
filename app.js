@@ -37,7 +37,7 @@ function testMultiply(a, b) { //eslint-disable-line
 var total = a * b;
 var arr = [];
 arr.push(total);
-var msg = 'The multiply of ' + a + ' and ' + b + ' is ' + total + '.';
+var msg = 'The product of ' + a + ' and ' + b + ' is ' + total + '.';
 arr.push(msg);
 
 return arr;
